@@ -1,0 +1,69 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "HTML to PDF (Current File)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${file}"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Resume)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.html",
+                "--output",
+                "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Cover Letter)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/cover_letter/Cover_Letter_Vinod_Neelakantam.html",
+                "--output",
+                "${workspaceFolder}/cover_letter/Cover_Letter_Vinod_Neelakantam.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Prompt Paths)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${input:htmlInputPath}",
+                "--output",
+                "${input:pdfOutputPath}"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "htmlInputPath",
+            "type": "promptString",
+            "description": "HTML input file path",
+            "default": "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.html"
+        },
+        {
+            "id": "pdfOutputPath",
+            "type": "promptString",
+            "description": "PDF output file path",
+            "default": "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.pdf"
+        }
+    ]
+}
