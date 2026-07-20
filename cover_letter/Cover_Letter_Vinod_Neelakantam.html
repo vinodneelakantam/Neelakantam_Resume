@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinod Kumar Neelakantam - Cover Letter</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: table;
+            width: 100%;
+            height: calc(100vh - 80px);
+        }
+
+        .sidebar {
+            display: table-cell;
+            width: 32%;
+            background: linear-gradient(165deg, #1f2f3d 0%, #1b2733 55%, #17222d 100%);
+            color: #e6edf5;
+            padding: 40px 30px;
+            vertical-align: top;
+            border-right: 1px solid #24384a;
+            box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+        }
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 4px solid #ecf0f1;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+        .sidebar h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #3b5368;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #8fb8dd;
+            letter-spacing: 1px;
+        }
+        .sidebar p {
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            color: #d7e2ec;
+        }
+        .sidebar a {
+            color: #dceaf6;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .sidebar a:hover {
+            color: #7ec3ff;
+        }
+        .social-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .social-logo {
+            width: 15px;
+            height: 15px;
+            flex: 0 0 15px;
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            font-size: 12.5px;
+            margin-bottom: 10px;
+            line-height: 1.45;
+            color: #c8d8e6;
+            padding: 10px 10px 10px 12px;
+            border-left: 3px solid #6d93b3;
+            border-radius: 7px;
+            background-image:
+                linear-gradient(145deg, rgba(214,230,242,0.14), rgba(255,255,255,0.02)),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 7px, transparent 7px 14px);
+        }
+        .skills-list strong {
+            display: block;
+            color: inherit;
+            font-weight: 600;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+
+        .main {
+            display: table-cell;
+            width: 68%;
+            padding: 50px 45px;
+            vertical-align: top;
+        }
+        .main-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 22px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e6edf3;
+        }
+        .identity {
+            flex: 1;
+            min-width: 0;
+            min-width: 340px;
+            max-width: 700px;
+        }
+        .contact-top {
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.45;
+            color: #4b5b66;
+            max-width: 100%;
+            padding: 12px 14px;
+            background-color: #f6f9fc;
+            border: 1px solid #dbe5ee;
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+        .contact-top p {
+            margin: 0 0 8px 0;
+        }
+        .contact-top p:last-child {
+            margin-bottom: 0;
+        }
+        .contact-top a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .contact-top a:hover {
+            color: #3498db;
+        }
+        .top-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .top-panel h2 {
+            margin-bottom: 10px;
+        }
+        .top-panel .about-section {
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 46px;
+            margin: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: 0.2px;
+            line-height: 1.02;
+            white-space: nowrap;
+        }
+        .name-first {
+            display: inline;
+            color: #2c3e50;
+        }
+        .name-last {
+            display: inline;
+            color: #1f5f8f;
+            margin-left: 8px;
+        }
+        .title {
+            display: inline-block;
+            font-size: 13px;
+            color: #1f5f8f;
+            font-weight: 600;
+            margin-top: 11px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            padding: 6px 12px;
+            border: 1px solid #cfe0ee;
+            border-radius: 999px;
+            background-color: #f4f9fd;
+        }
+        .main h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .about-section {
+            margin-bottom: 35px;
+        }
+        .about-section ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 14.5px;
+            color: #444;
+        }
+        .about-section li {
+            margin-bottom: 8px;
+        }
+
+        .letter-body {
+            font-size: 14.5px;
+            color: #444;
+            margin-bottom: 24px;
+        }
+        .letter-body p {
+            margin: 0 0 12px 0;
+        }
+        .signature {
+            margin-top: 16px;
+            font-size: 14.5px;
+            color: #444;
+        }
+
+        @page {
+            size: A4;
+            margin: 7mm;
+        }
+
+        @media print {
+            html, body {
+                width: 210mm;
+                background: #ffffff;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                color: #000000;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container {
+                margin: 0;
+                max-width: none;
+                box-shadow: none;
+                height: calc(297mm - 14mm);
+            }
+
+            .sidebar {
+                padding: 22px 18px;
+            }
+            .profile-img-container {
+                margin-bottom: 14px;
+            }
+            .profile-img {
+                width: 116px;
+                height: 116px;
+                border-width: 3px;
+            }
+            .sidebar h2 {
+                font-size: 14px;
+                margin-top: 16px;
+                margin-bottom: 8px;
+                padding-bottom: 5px;
+            }
+            .sidebar p {
+                font-size: 11px;
+                margin-bottom: 6px;
+                line-height: 1.28;
+            }
+            .skills-list li {
+                font-size: 11px;
+                margin-bottom: 5px;
+                line-height: 1.25;
+                padding: 6px 7px 6px 8px;
+            }
+
+            .main {
+                padding: 22px 20px;
+            }
+            .main-header {
+                margin-bottom: 10px;
+                padding-bottom: 7px;
+            }
+            h1 {
+                font-size: 29px;
+            }
+            .title {
+                font-size: 12px;
+                margin-top: 6px;
+                padding: 3px 8px;
+            }
+            .contact-top {
+                font-size: 11px;
+                padding: 7px 8px;
+                margin-bottom: 10px;
+            }
+            .contact-top p {
+                margin-bottom: 4px;
+            }
+            .top-panels {
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+            .top-panel h2 {
+                margin-bottom: 5px;
+            }
+            .main h2 {
+                font-size: 17px;
+                margin-bottom: 6px;
+                padding-bottom: 4px;
+            }
+            .about-section {
+                margin-bottom: 8px;
+            }
+            .about-section ul {
+                font-size: 11.3px;
+                line-height: 1.24;
+            }
+            .about-section li {
+                margin-bottom: 3px;
+            }
+            .letter-body {
+                font-size: 11.3px;
+                margin-bottom: 10px;
+            }
+            .letter-body p {
+                margin-bottom: 6px;
+                line-height: 1.26;
+            }
+            .signature {
+                margin-top: 6px;
+                font-size: 11.3px;
+            }
+            .signature p {
+                margin: 0 0 4px 0;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .main-header {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .identity {
+                min-width: 0;
+            }
+            .contact-top {
+                text-align: left;
+                max-width: 100%;
+            }
+            .top-panels {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 34px;
+                line-height: 1.04;
+            }
+            .title {
+                margin-top: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-img-container">
+                <img src="../assets/photo.jpeg" alt="Vinod Kumar Neelakantam" class="profile-img">
+            </div>
+
+            <svg width="0" height="0" style="position:absolute">
+                <symbol id="icon-linkedin" viewBox="0 0 24 24">
+                    <rect x="1" y="1" width="22" height="22" rx="4" fill="#0A66C2"></rect>
+                    <circle cx="7" cy="7" r="1.5" fill="#ffffff"></circle>
+                    <rect x="5.5" y="10" width="3" height="8.5" fill="#ffffff"></rect>
+                    <path d="M11 10h2.9v1.4c.5-.9 1.5-1.6 2.9-1.6 2.7 0 3.2 1.8 3.2 4.1v4.6h-3v-4.1c0-1.3-.5-2.1-1.6-2.1-.9 0-1.5.6-1.7 1.2-.1.2-.1.5-.1.8v4.2h-3V10z" fill="#ffffff"></path>
+                </symbol>
+                <symbol id="icon-github" viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.15.68-3.82-1.52-3.82-1.52-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.16 1.74 1.16 1.01 1.74 2.66 1.24 3.3.95.1-.73.4-1.24.73-1.52-2.51-.29-5.15-1.25-5.15-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.46.11-3.05 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.65 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.59.23 2.76.11 3.05.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.26-5.16 5.55.41.35.77 1.03.77 2.08 0 1.5-.01 2.7-.01 3.07 0 .3.2.66.79.55 4.5-1.5 7.75-5.76 7.75-10.78C23.25 5.48 18.27.5 12 .5z"></path>
+                </symbol>
+            </svg>
+
+            <h2>Contact</h2>
+            <p>&#128205; Neu Ulm, Germany</p>
+            <p>&#128222; +49 15124711204</p>
+            <p>&#9993; <a href="mailto:vinodneelakantam@gmail.com">vinodneelakantam@gmail.com</a></p>
+
+            <h2>Links</h2>
+            <p><strong class="social-label"><svg class="social-logo" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn:</strong><br><a href="https://www.linkedin.com/in/vinodneelakantam">linkedin.com/in/vinodneelakantam</a></p>
+            <p><strong class="social-label"><svg class="social-logo" aria-hidden="true"><use href="#icon-github"></use></svg>GitHub:</strong><br><a href="https://github.com/vinodneelakantam">github.com/vinodneelakantam</a></p>
+
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Build and Release Automation</strong>C/C++, Python, Groovy, Shell</li>
+                <li><strong>DevOps for Embedded</strong>CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory</li>
+                <li><strong>Automotive Cybersecurity</strong>TARA, ISO/SAE 21434, CSMS (UNECE R155), SUMS (UNECE R156)</li>
+                <li><strong>Secure OTA/SOTA</strong>Package signing, integrity checks, partial update strategy</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <header class="main-header">
+                <div class="identity">
+                    <h1>
+                        <span class="name-first">Vinod Kumar</span>
+                        <span class="name-last">Neelakantam</span>
+                    </h1>
+                    <p class="title">Embedded Platform Integration</p>
+                </div>
+            </header>
+
+            <div class="contact-top">
+                <p><strong>To:</strong> Hiring Manager</p>
+                <p><strong>Date:</strong> 18 July 2026</p>
+                <p><strong>Subject:</strong> Application for Embedded Platform Integration and Release Engineering Role</p>
+            </div>
+
+            <div class="top-panels">
+                <div class="top-panel">
+                    <h2>Profile Fit</h2>
+                    <div class="about-section">
+                        <ul>
+                            <li>12+ years in automotive software integration across ADAS and ECU programs.</li>
+                            <li>Hands-on delivery ownership from platform integration through release readiness.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top-panel">
+                    <h2>Value Offered</h2>
+                    <div class="about-section">
+                        <ul>
+                            <li>ASPICE SWE.5-aligned pipelines with traceability and quality gates.</li>
+                            <li>Cybersecurity-aligned releases with TARA and ISO/SAE 21434 evidence support.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Cover Letter</h2>
+            <div class="letter-body">
+                <p>Dear Hiring Manager,</p>
+                <p>I am applying for the Embedded Platform Integration and DevOps role at your Organisation. In my current role at AUMOVIO (Continental), I lead multi-variant software integration and release delivery using C/C++, Jenkins/CloudBees, Docker, Kubernetes, Artifactory, and Python automation.</p>
+                <p>I focus on building predictable, auditable, and secure release workflows for distributed teams. My experience includes secure OTA/SOTA packaging, dependency governance, and cross-functional coordination to ensure stable and compliant delivery outcomes.</p>
+                <p>I would welcome the opportunity to discuss how I can support your upcoming platform and release milestones.</p>
+            </div>
+
+            <div class="signature">
+                <p>Thank you for your consideration.</p>
+                <p>Sincerely,<br><strong>Vinod Kumar Neelakantam</strong></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
