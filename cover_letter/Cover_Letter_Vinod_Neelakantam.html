@@ -96,10 +96,14 @@
             color: #c8d8e6;
             padding: 10px 10px 10px 12px;
             border-left: 3px solid #6d93b3;
+            border-bottom: 1px solid rgba(255,255,255,0.14);
             border-radius: 7px;
             background-image:
                 linear-gradient(145deg, rgba(214,230,242,0.14), rgba(255,255,255,0.02)),
                 repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 7px, transparent 7px 14px);
+        }
+        .skills-list li:last-child {
+            border-bottom: none;
         }
         .skills-list strong {
             display: block;
@@ -263,32 +267,35 @@
             }
 
             .sidebar {
-                padding: 22px 18px;
+                padding: 16px 16px;
             }
             .profile-img-container {
-                margin-bottom: 14px;
+                margin-bottom: 8px;
             }
             .profile-img {
-                width: 116px;
-                height: 116px;
+                width: 88px;
+                height: 88px;
                 border-width: 3px;
             }
             .sidebar h2 {
-                font-size: 14px;
-                margin-top: 16px;
-                margin-bottom: 8px;
-                padding-bottom: 5px;
+                font-size: 13px;
+                margin-top: 10px;
+                margin-bottom: 6px;
+                padding-bottom: 4px;
             }
             .sidebar p {
-                font-size: 11px;
-                margin-bottom: 6px;
-                line-height: 1.28;
+                font-size: 10.5px;
+                margin-bottom: 5px;
+                line-height: 1.22;
             }
             .skills-list li {
-                font-size: 11px;
-                margin-bottom: 5px;
-                line-height: 1.25;
-                padding: 6px 7px 6px 8px;
+                font-size: 9.7px;
+                margin-bottom: 3px;
+                line-height: 1.18;
+                padding: 4px 6px 6px 7px;
+            }
+            .skills-list li:last-child {
+                border-bottom: none;
             }
 
             .main {
@@ -409,10 +416,18 @@
             <h2>Skills</h2>
             <ul class="skills-list">
                 <li><strong>Build &amp; Release Automation</strong>C/C++, Python, Groovy, Shell</li>
+                <li><strong>Standards &amp; Methodologies</strong>ASPICE SWE.5, ISO 21434, Agile, CI/CD/CT, TDD, SW/HW Debugging</li>
+                <li><strong>Automotive Tools</strong>Development &amp; Integration</li>
                 <li><strong>DevOps for Embedded</strong>CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory, Grafana/ElasticSearch</li>
-                <li><strong>DevSecOps &amp; Cybersecurity</strong>SAST/DAST, Trivy/Snyk, SBOM, TARA, ISO/SAE 21434, CSMS/SUMS</li>
-                <li><strong>Secure OTA/SOTA</strong>Package signing, integrity checks, partial update strategy</li>
+                <li><strong>Infrastructure as Code</strong>Docker, Pipeline-as-Code (Groovy/Jenkinsfile/Github-Actions), Kyverno-Policy management</li>
+                <li><strong>DevSecOps</strong>SAST/DAST, container &amp; dependency scanning (Trivy/Snyk), secrets management, SBOM</li>
+                <li><strong>Build Systems</strong>Yocto, Zephyr, AOSP, Custom (Bricks-Evo)</li>
+                <li><strong>Cybersecurity</strong>OTA, Partial-Update Strategy</li>
+                <li><strong>Interfaces</strong>UART, I2C, SPI, CAN, Ethernet</li>
             </ul>
+
+            <h2>Certifications</h2>
+            <p>ISTQB Certified Tester - Foundation Level (CTFL)</p>
         </aside>
 
         <main class="main">
@@ -429,7 +444,7 @@
             <div class="contact-top">
                 <p><strong>To:</strong> Hiring Manager</p>
                 <p><strong>Date:</strong> 18 July 2026</p>
-                <p><strong>Subject:</strong> Application for Embedded Platform Integration Engineer - Build &amp; Release / DevOps Role</p>
+                <p><strong>Subject:</strong> Application for Embedded Platform Integration Engineer /Build &amp; Release / DevOps Role</p>
             </div>
 
             <div class="top-panels">
@@ -448,6 +463,16 @@
                         <ul>
                             <li>ASPICE SWE.5-aligned pipelines with traceability and quality gates.</li>
                             <li>Cybersecurity-aligned releases with TARA and ISO/SAE 21434 evidence support.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top-panel" style="grid-column: 1 / -1;">
+                    <h2>Current Role Focus</h2>
+                    <div class="about-section">
+                        <ul>
+                            <li>Embedded Software Integration Engineer - Automotive/ADAS Platforms</li>
+                            <li>Build &amp; Release Engineer - CI/CD, Embedded-DevOps</li>
+                            <li>Automotive Cybersecurity Engineer - Secure OTA/SOTA Delivery</li>
                         </ul>
                     </div>
                 </div>
