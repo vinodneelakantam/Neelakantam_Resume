@@ -28,7 +28,7 @@ window.resumeDataV2 = {
     ],
     skills: [
         "Build & Release Automation: C/C++, Python, Groovy, Shell",
-        "Standards & Methodologies: ASPICE SWE.5, ISO 26262, Agile, CI/CD/CT, TDD, SW/HW Debugging",
+        "Standards & Methodologies: ASPICE SWE.5, ISO 21434, Agile, CI/CD/CT, TDD, SW/HW Debugging",
         "Automotive Tools: Development & Integration",
         "DevOps for Embedded: CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory, Grafana/ElasticSearch",
         "Infrastructure as Code: Docker, Pipeline-as-Code (Groovy/Jenkinsfile/Github-Actions), Kyverno-Policy management",
