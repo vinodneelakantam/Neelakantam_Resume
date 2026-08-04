@@ -13,16 +13,29 @@
             ]
         },
         {
-            "name": "HTML to PDF (Resume)",
+            "name": "HTML to PDF (Resume 2-Page)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
-                "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.html",
+                "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html",
                 "--output",
-                "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.pdf"
+                "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Resume 3-Page)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.html",
+                "--output",
+                "${workspaceFolder}/resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.pdf"
             ]
         },
         {
@@ -57,13 +70,13 @@
             "id": "htmlInputPath",
             "type": "promptString",
             "description": "HTML input file path",
-            "default": "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.html"
+            "default": "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html"
         },
         {
             "id": "pdfOutputPath",
             "type": "promptString",
             "description": "PDF output file path",
-            "default": "${workspaceFolder}/resume/CV_Neelakantam_Embedded_Build_Devops.pdf"
+            "default": "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf"
         }
     ]
 }

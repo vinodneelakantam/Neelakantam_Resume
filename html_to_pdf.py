@@ -16,6 +16,17 @@ def is_url(value: str) -> bool:
     return parsed.scheme in {"http", "https", "file"}
 
 
+def is_windows_executable(browser: Path) -> bool:
+    return os.name != "nt" and str(browser).lower().endswith(".exe")
+
+
+def to_windows_path(path: Path) -> str:
+    result = subprocess.run(
+        ["wslpath", "-w", str(path)], capture_output=True, text=True, check=True
+    )
+    return result.stdout.strip()
+
+
 def find_browser(explicit_path: str | None = None) -> Path:
     if explicit_path:
         candidate = Path(explicit_path).expanduser().resolve()
@@ -33,6 +44,15 @@ def find_browser(explicit_path: str | None = None) -> Path:
         r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
         r"C:\Program Files\Google\Chrome\Application\chrome.exe",
         r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+        "/usr/bin/chromium",
+        "/usr/bin/chromium-browser",
+        "/usr/bin/google-chrome",
+        "/usr/bin/microsoft-edge",
+        # WSL: the Windows browser, reached through the /mnt/<drive> interop mount.
+        "/mnt/c/Program Files/Microsoft/Edge/Application/msedge.exe",
+        "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+        "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",
+        "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe",
     ]
 
     for item in env_candidates + default_candidates:
@@ -48,13 +68,17 @@ def find_browser(explicit_path: str | None = None) -> Path:
     )
 
 
-def resolve_html_input(html_input: str) -> str:
+def resolve_html_input(html_input: str, browser: Path) -> str:
     if is_url(html_input):
         return html_input
 
     html_path = Path(html_input).expanduser().resolve()
     if not html_path.exists():
         raise FileNotFoundError(f"HTML input file not found: {html_path}")
+
+    # A Windows browser reached via WSL interop needs a Windows-style file URI.
+    if is_windows_executable(browser):
+        return f"file:///{to_windows_path(html_path)}"
     return html_path.as_uri()
 
 
@@ -73,14 +97,23 @@ def resolve_output_path(output: str | None, html_input: str) -> Path:
 
 
 def convert_html_to_pdf(browser: Path, html_uri: str, output_pdf: Path) -> None:
+    # A Windows browser reached via WSL interop needs a Windows-style output path.
+    print_to_pdf_path = (
+        to_windows_path(output_pdf) if is_windows_executable(browser) else str(output_pdf)
+    )
     command = [
         str(browser),
         "--headless",
         "--disable-gpu",
-        f"--print-to-pdf={output_pdf}",
+        f"--print-to-pdf={print_to_pdf_path}",
         "--no-pdf-header-footer",
-        html_uri,
     ]
+
+    # Chromium refuses to run its sandbox as root (e.g. inside a Docker container).
+    if hasattr(os, "geteuid") and os.geteuid() == 0:
+        command.append("--no-sandbox")
+
+    command.append(html_uri)
 
     result = subprocess.run(command, capture_output=True, text=True)
     if result.returncode != 0:
@@ -126,7 +159,7 @@ def main() -> int:
 
     try:
         browser = find_browser(args.browser)
-        html_uri = resolve_html_input(args.input)
+        html_uri = resolve_html_input(args.input, browser)
         output_pdf = resolve_output_path(args.output, args.input)
         convert_html_to_pdf(browser, html_uri, output_pdf)
         print(f"PDF created: {output_pdf}")

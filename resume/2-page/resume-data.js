@@ -1,5 +1,5 @@
 window.resumeData = {
-    profileImage: "../assets/photo.jpeg",
+    profileImage: "../../assets/photo.jpeg",
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",
     title: "Embedded Platform Integration",

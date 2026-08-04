@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinod Kumar Neelakantam - Resume (3-Page)</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: table;
+            width: 100%;
+        }
+        
+        /* Sidebar styling */
+        .sidebar {
+            display: table-cell;
+            width: 32%;
+            background: linear-gradient(165deg, #1f2f3d 0%, #1b2733 55%, #17222d 100%);
+            color: #e6edf5;
+            padding: 40px 30px;
+            vertical-align: top;
+            border-right: 1px solid #24384a;
+            box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+        }
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 4px solid #ecf0f1;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+        .sidebar h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #3b5368;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #8fb8dd;
+            letter-spacing: 1px;
+        }
+        .sidebar p {
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            color: #d7e2ec;
+        }
+        .sidebar a {
+            color: #dceaf6;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .sidebar a:hover {
+            color: #7ec3ff;
+        }
+        .social-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .social-logo {
+            width: 15px;
+            height: 15px;
+            flex: 0 0 15px;
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            font-size: 12.5px;
+            margin-bottom: 10px;
+            line-height: 1.45;
+            color: #c8d8e6;
+            padding: 10px 10px 10px 12px;
+            border-left: 3px solid #5f89ad;
+            border-radius: 7px;
+            background-image:
+                linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 7px, transparent 7px 14px);
+        }
+        .skills-list li:nth-child(even) {
+            border-left-color: #7aa6ce;
+            background-image:
+                linear-gradient(145deg, rgba(138,180,215,0.18), rgba(255,255,255,0.01)),
+                repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0 7px, transparent 7px 14px);
+        }
+        .skills-list strong {
+            display: block;
+            color: #f5fbff;
+            font-weight: 600;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+        
+        /* Main content styling */
+        .main {
+            display: table-cell;
+            width: 68%;
+            padding: 50px 45px;
+            vertical-align: top;
+        }
+        .main-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 22px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e6edf3;
+        }
+        .identity {
+            flex: 1;
+            min-width: 0;
+            min-width: 340px;
+            max-width: 700px;
+        }
+        .contact-top {
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.45;
+            color: #4b5b66;
+            max-width: 100%;
+            padding: 12px 14px;
+            background-color: #f6f9fc;
+            border: 1px solid #dbe5ee;
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+        .contact-top p {
+            margin: 0 0 8px 0;
+        }
+        .contact-top p:last-child {
+            margin-bottom: 0;
+        }
+        .contact-top a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .contact-top a:hover {
+            color: #3498db;
+        }
+        .top-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .top-panel h2 {
+            margin-bottom: 10px;
+        }
+        .top-panel .about-section {
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 46px;
+            margin: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: 0.2px;
+            line-height: 1.02;
+            white-space: nowrap;
+        }
+        .name-first {
+            display: inline;
+            color: #2c3e50;
+        }
+        .name-last {
+            display: inline;
+            color: #1f5f8f;
+            margin-left: 8px;
+        }
+        .title {
+            display: inline-block;
+            font-size: 13px;
+            color: #1f5f8f;
+            font-weight: 600;
+            margin-top: 11px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            padding: 6px 12px;
+            border: 1px solid #cfe0ee;
+            border-radius: 999px;
+            background-color: #f4f9fd;
+        }
+        .main h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .about-section {
+            margin-bottom: 35px;
+        }
+        .about-section ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 14.5px;
+            color: #444;
+        }
+        .about-section li {
+            margin-bottom: 8px;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+        }
+        .job-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0 0 4px 0;
+        }
+        .job-company {
+            font-size: 15px;
+            color: #3498db;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+        .job-meta {
+            font-size: 13.5px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        .job-details {
+            font-size: 14.5px;
+            color: #444;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .job-details li {
+            margin-bottom: 6px;
+        }
+        
+        .bullet-list {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        .job {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .print-document {
+            display: none;
+        }
+
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        @media print {
+            html, body {
+                width: 210mm;
+                background: #ffffff;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                color: #000000;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container {
+                display: none;
+            }
+            .print-document {
+                display: block;
+            }
+
+            .print-page-one {
+                display: table;
+                width: 100%;
+                break-after: auto;
+                page-break-after: auto;
+            }
+            .print-sidebar,
+            .print-main {
+                display: table-cell;
+                vertical-align: top;
+            }
+            .print-sidebar {
+                width: 32%;
+                padding: 24px 18px;
+                background: linear-gradient(165deg, #1f2f3d 0%, #1b2733 55%, #17222d 100%);
+                color: #e6edf5;
+            }
+            .print-main {
+                width: 68%;
+                padding: 24px 22px;
+            }
+
+            .print-sidebar .profile-img {
+                width: 120px;
+                height: 120px;
+                border-width: 3px;
+                border-color: #ecf0f1;
+            }
+            .print-sidebar h2 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #3b5368;
+                color: #8fb8dd;
+            }
+            .print-sidebar p,
+            .print-sidebar .skills-list li {
+                font-size: 11px;
+                margin-bottom: 8px;
+                line-height: 1.35;
+                color: #d7e2ec;
+            }
+            .print-sidebar a,
+            .print-main a,
+            .print-rest a {
+                color: inherit;
+                text-decoration: none;
+            }
+            .print-sidebar .skills-list li,
+            .print-sidebar .skills-list li:nth-child(even) {
+                border-left-color: #6c9ac0;
+                background-image: none;
+                background-color: rgba(255,255,255,0.08);
+            }
+
+            .print-main .main-header {
+                display: block;
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+            .print-main .identity {
+                min-width: 0;
+            }
+            .print-main .top-panels {
+                gap: 10px;
+                margin-bottom: 12px;
+            }
+            .print-main .top-panel h2 {
+                margin-bottom: 6px;
+            }
+            .print-main .contact-top {
+                text-align: left;
+                font-size: 11px;
+                width: 100%;
+                max-width: 100%;
+                padding: 7px 8px;
+                background-color: #f6f9fc;
+                border: 1px solid #dbe5ee;
+                border-radius: 10px;
+                margin-bottom: 0;
+            }
+            .print-main h1 {
+                font-size: 30px;
+                margin-bottom: 2px;
+            }
+            .print-main .title {
+                font-size: 13px;
+                margin-top: 8px;
+                padding: 4px 8px;
+            }
+            .print-main h2 {
+                font-size: 17px;
+                margin-bottom: 8px;
+                padding-bottom: 4px;
+                break-after: avoid-page;
+                page-break-after: avoid;
+            }
+            .print-main .about-section {
+                margin-bottom: 12px;
+            }
+            .print-main .about-section ul,
+            .print-main .job-details {
+                font-size: 11.5px;
+                line-height: 1.3;
+            }
+            .print-main .about-section li,
+            .print-main .job-details li {
+                margin-bottom: 3px;
+            }
+
+            .print-rest {
+                padding: 0;
+                break-before: page;
+                page-break-before: always;
+            }
+            .print-rest h2 {
+                font-size: 21px;
+                margin-bottom: 16px;
+                padding-bottom: 8px;
+                break-after: avoid-page;
+                page-break-after: avoid;
+            }
+            .print-rest .about-section {
+                margin-bottom: 12px;
+            }
+            .print-rest .job {
+                margin-bottom: 26px;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+            .print-rest .job-title {
+                font-size: 17px;
+                margin-bottom: 4px;
+            }
+            .print-rest .job-company {
+                font-size: 15px;
+                margin-bottom: 4px;
+            }
+            .print-rest .job-meta {
+                font-size: 13.5px;
+                margin-bottom: 12px;
+            }
+            .print-rest .job-details {
+                font-size: 14.5px;
+                line-height: 1.5;
+            }
+            .print-rest .job-details li {
+                margin-bottom: 7px;
+            }
+
+            .print-main h2 + .about-section,
+            .print-main h2 + .job,
+            .print-rest h2 + .about-section,
+            .print-rest h2 + .job {
+                break-before: avoid-page;
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .main-header {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .identity {
+                min-width: 0;
+            }
+            .contact-top {
+                text-align: left;
+                max-width: 100%;
+            }
+            .top-panels {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 34px;
+                line-height: 1.04;
+            }
+            .title {
+                margin-top: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="resumeContainer"></div>
+
+    <div id="printDocument" class="print-document"></div>
+
+    <script src="resume-data-3page.js"></script>
+    <script>
+        (function () {
+            function escapeHTML(text) {
+                return String(text)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/\"/g, "&quot;")
+                    .replace(/'/g, "&#39;");
+            }
+
+            function linkedInIcon() {
+                return '<svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="4" fill="#0A66C2"></rect><circle cx="7" cy="7" r="1.5" fill="#ffffff"></circle><rect x="5.5" y="10" width="3" height="8.5" fill="#ffffff"></rect><path d="M11 10h2.9v1.4c.5-.9 1.5-1.6 2.9-1.6 2.7 0 3.2 1.8 3.2 4.1v4.6h-3v-4.1c0-1.3-.5-2.1-1.6-2.1-.9 0-1.5.6-1.7 1.2-.1.2-.1.5-.1.8v4.2h-3V10z" fill="#ffffff"></path></svg>';
+            }
+
+            function githubIcon() {
+                return '<svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffffff" d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.15.68-3.82-1.52-3.82-1.52-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.16 1.74 1.16 1.01 1.74 2.66 1.24 3.3.95.1-.73.4-1.24.73-1.52-2.51-.29-5.15-1.25-5.15-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.46.11-3.05 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.65 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.59.23 2.76.11 3.05.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.26-5.16 5.55.41.35.77 1.03.77 2.08 0 1.5-.01 2.7-.01 3.07 0 .3.2.66.79.55 4.5-1.5 7.75-5.76 7.75-10.78C23.25 5.48 18.27.5 12 .5z"></path></svg>';
+            }
+
+            function renderListSection(title, items) {
+                return '<h2>' + escapeHTML(title) + '</h2><div class="about-section"><ul>' +
+                    items.map(function (item) {
+                        return '<li>' + escapeHTML(item) + '</li>';
+                    }).join('') +
+                    '</ul></div>';
+            }
+
+            function renderResume(data) {
+                var container = document.getElementById('resumeContainer');
+                if (!container || !data) {
+                    return;
+                }
+
+                var linksHtml = data.links.map(function (link) {
+                    var icon = link.type === 'linkedin' ? linkedInIcon() : githubIcon();
+                    return '<p><strong class="social-label">' + icon + escapeHTML(link.label) + ':</strong><br><a href="' + escapeHTML(link.href) + '" target="_blank">' + escapeHTML(link.text) + '</a></p>';
+                }).join('');
+
+                var skillsHtml = data.skills.map(function (skill) {
+                    var separatorIndex = skill.indexOf(':');
+                    if (separatorIndex === -1) {
+                        return '<li><strong>' + escapeHTML(skill) + '</strong></li>';
+                    }
+                    var label = skill.slice(0, separatorIndex);
+                    var text = skill.slice(separatorIndex + 1).trim();
+                    return '<li><strong>' + escapeHTML(label) + ': </strong>' + escapeHTML(text) + '</li>';
+                }).join('');
+
+                var contactTop = [
+                    '<p>&#128205; ' + escapeHTML(data.address) + '</p>',
+                    '<p>&#128222; ' + escapeHTML(data.contact.phone) + '</p>',
+                    '<p>&#9993; <a href="mailto:' + escapeHTML(data.contact.email) + '">' + escapeHTML(data.contact.email) + '</a></p>',
+                    '<p>&#127760; ' + escapeHTML(data.nationality) + '</p>'
+                ].join('');
+
+                var educationValue = data.education.map(function (entry) {
+                    return escapeHTML(entry.degree) + ' — ' + escapeHTML(entry.location) + ', ' + escapeHTML(entry.year);
+                }).join('; ');
+
+                var personalInfo = [
+                    '<li><strong>Education:</strong> ' + educationValue + '</li>',
+                    '<li><strong>Languages:</strong> ' + escapeHTML(data.languages.join(', ')) + '</li>',
+                    '<li><strong>Driving License:</strong> ' + escapeHTML(data.drivingLicense) + '</li>'
+                ].join('');
+
+                var workHtml = data.workExperience.map(function (job) {
+                    return '<div class="job">' +
+                        '<div class="job-title">' + escapeHTML(job.title) + '</div>' +
+                        '<div class="job-company">' + escapeHTML(job.company) + '</div>' +
+                        '<div class="job-meta">' + escapeHTML(job.period) + '</div>' +
+                        '<ul class="job-details">' +
+                        job.details.map(function (item) {
+                            return '<li>' + escapeHTML(item) + '</li>';
+                        }).join('') +
+                        '</ul></div>';
+                }).join('');
+
+                container.innerHTML =
+                    '<div class="sidebar">' +
+                        '<div class="profile-img-container"><img src="' + escapeHTML(data.profileImage) + '" alt="' + escapeHTML(data.nameFirst + ' ' + data.nameLast) + '" class="profile-img"></div>' +
+                        '<h2>Links</h2>' + linksHtml +
+                        '<h2>Skills</h2><ul class="skills-list">' + skillsHtml + '</ul>' +
+                    '</div>' +
+                    '<div class="main">' +
+                        '<div class="main-header"><div class="identity"><h1><span class="name-first">' + escapeHTML(data.nameFirst) + '</span> <span class="name-last">' + escapeHTML(data.nameLast) + '</span></h1><div class="title">' + escapeHTML(data.title) + '</div></div></div>' +
+                        '<div class="top-panels">' +
+                            '<div class="top-panel"><h2>Contact</h2><div class="contact-top">' + contactTop + '</div></div>' +
+                            '<div class="top-panel"><h2>Personal Information</h2><div class="about-section"><ul>' + personalInfo + '</ul></div></div>' +
+                        '</div>' +
+                        renderListSection('About Me', data.aboutMe) +
+                        renderListSection('Core Competencies', data.coreCompetencies) +
+                        renderListSection('Certifications', data.certifications) +
+                        renderListSection('Current Role Focus', data.currentRoleFocus) +
+                        '<h2>Work Experience</h2>' + workHtml +
+                    '</div>';
+            }
+
+            function buildPrintLayout() {
+                var sourceContainer = document.querySelector('.container');
+                var printHost = document.getElementById('printDocument');
+                if (!sourceContainer || !printHost) {
+                    return;
+                }
+
+                var sourceSidebar = sourceContainer.querySelector('.sidebar');
+                var sourceMain = sourceContainer.querySelector('.main');
+                if (!sourceSidebar || !sourceMain) {
+                    return;
+                }
+
+                var mainChildren = Array.prototype.slice.call(sourceMain.children);
+                if (mainChildren.length < 3) {
+                    return;
+                }
+
+                var splitIndex = mainChildren.findIndex(function (node) {
+                    return node.tagName === 'H2' && node.textContent.trim().toLowerCase() === 'work experience';
+                });
+                if (splitIndex < 0) {
+                    splitIndex = mainChildren.length;
+                }
+
+                var pageOne = document.createElement('section');
+                pageOne.className = 'print-page-one';
+
+                var pageOneSidebar = document.createElement('div');
+                pageOneSidebar.className = 'print-sidebar';
+                pageOneSidebar.innerHTML = sourceSidebar.innerHTML;
+
+                var pageOneMain = document.createElement('div');
+                pageOneMain.className = 'print-main';
+
+                var i;
+                for (i = 0; i < splitIndex; i += 1) {
+                    pageOneMain.appendChild(mainChildren[i].cloneNode(true));
+                }
+
+                pageOne.appendChild(pageOneSidebar);
+                pageOne.appendChild(pageOneMain);
+
+                var restPages = document.createElement('section');
+                restPages.className = 'print-rest';
+                for (i = splitIndex; i < mainChildren.length; i += 1) {
+                    restPages.appendChild(mainChildren[i].cloneNode(true));
+                }
+
+                printHost.innerHTML = '';
+                printHost.appendChild(pageOne);
+                printHost.appendChild(restPages);
+            }
+
+            function init() {
+                renderResume(window.resumeData3Page);
+                buildPrintLayout();
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+
+</body>
+</html>

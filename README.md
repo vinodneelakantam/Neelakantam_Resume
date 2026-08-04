@@ -48,10 +48,19 @@ He has led platform integration and multi-variant release workflows for automoti
 |  |- Cover_Letter_Vinod_Neelakantam.html
 |  `- Cover_Letter_Vinod_Neelakantam.pdf
 |- resume/
-|  |- CV_Neelakantam_Embedded_Build_Devops.html
-|  |- CV_Neelakantam_Embedded_Build_Devops.pdf
-|  `- resume-data.js
+|  |- 2-page/
+|  |  |- CV_Neelakantam_Embedded_Build_Devops.html
+|  |  |- CV_Neelakantam_Embedded_Build_Devops.pdf
+|  |  `- resume-data.js
+|  `- 3-page/
+|     |- CV_Neelakantam_Embedded_Build_Devops_3Page.html
+|     |- CV_Neelakantam_Embedded_Build_Devops_3Page.pdf
+|     `- resume-data-3page.js
+|- scripts/
+|  `- generate-pdfs.sh
 |- html_to_pdf.py
+|- Dockerfile
+|- .dockerignore
 |- skills.md
 `- README.md
 ```
@@ -60,26 +69,64 @@ He has led platform integration and multi-variant release workflows for automoti
 
 | Document | Format | Purpose |
 | --- | --- | --- |
-| Resume | HTML and PDF | Main professional profile and work experience |
+| Resume (2-page) | HTML and PDF | Compact, dense-layout professional profile and work experience |
+| Resume (3-page) | HTML and PDF | Expanded, more detailed work history and profile content, spanning 3 pages |
 | Cover Letter | HTML and PDF | Application-ready cover letter for embedded platform integration and release engineering roles |
-| Resume Data | JavaScript | Structured content used by the resume HTML |
+| Resume Data (2-page) | JavaScript | Structured content used by the 2-page resume HTML ([resume-data.js](resume/2-page/resume-data.js)) |
+| Resume Data (3-page) | JavaScript | Structured, more detailed content used by the 3-page resume HTML ([resume-data-3page.js](resume/3-page/resume-data-3page.js)) |
 | Conversion Script | Python | Converts local HTML documents into recruiter-friendly PDF files |
+
+The two resume versions have independent data files, since the 3-page resume carries more detailed work history (e.g. separate AUMOVIO role entries, project/tooling specifics) than the condensed 2-page version. Update the matching data file for whichever version you're editing.
 
 ## Generate PDFs
 
 The project includes a small Python utility that uses a local Chromium-based browser, such as Microsoft Edge or Google Chrome, to print the HTML documents to PDF.
 
-Generate the resume:
+Generate the resume (2-page):
 
 ```powershell
-python .\html_to_pdf.py --input .\resume\CV_Neelakantam_Embedded_Build_Devops.html --output .\resume\CV_Neelakantam_Embedded_Build_Devops.pdf
+python .\html_to_pdf.py --input .\resume\2-page\CV_Neelakantam_Embedded_Build_Devops.html --output .\resume\2-page\CV_Neelakantam_Embedded_Build_Devops.pdf
 ```
+
+Generate the resume (3-page):
+
+```powershell
+python .\html_to_pdf.py --input .\resume\3-page\CV_Neelakantam_Embedded_Build_Devops_3Page.html --output .\resume\3-page\CV_Neelakantam_Embedded_Build_Devops_3Page.pdf
+```
+
+Or use the VS Code **Run and Debug** panel with the "HTML to PDF (Resume 2-Page)" / "HTML to PDF (Resume 3-Page)" launch configurations ([.vscode/launch.json](.vscode/launch.json)).
 
 Generate the cover letter:
 
 ```powershell
 python .\html_to_pdf.py --input .\cover_letter\Cover_Letter_Vinod_Neelakantam.html --output .\cover_letter\Cover_Letter_Vinod_Neelakantam.pdf
 ```
+
+## Generate PDFs with Docker
+
+A [Dockerfile](Dockerfile) is included so PDF generation doesn't depend on a locally installed Edge/Chrome browser. The image bundles Python and headless Chromium.
+
+Build the image once:
+
+```bash
+docker build -t resume-pdf-tool:latest .
+```
+
+Run it against any HTML file in this repo by mounting the repository into the container (paths are relative to `/workspace`, which is the repo root):
+
+```bash
+docker run --rm -v "$(pwd):/workspace" -w /workspace resume-pdf-tool:latest \
+  --input resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html \
+  --output resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf
+```
+
+Or regenerate every PDF (both resumes and the cover letter) in one step with the helper script, which also builds the image:
+
+```bash
+./scripts/generate-pdfs.sh
+```
+
+These are also available as VS Code tasks (**Terminal > Run Task...**): "Docker: Build PDF Tool Image", "Docker: Generate All PDFs", "Docker: Generate Resume (2-Page)", "Docker: Generate Resume (3-Page)", and "Docker: Generate Cover Letter" ([.vscode/tasks.json](.vscode/tasks.json)).
 
 ## Links
 

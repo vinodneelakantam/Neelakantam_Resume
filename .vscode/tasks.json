@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Docker: Build PDF Tool Image",
+            "type": "shell",
+            "command": "docker build -t resume-pdf-tool:latest .",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate All PDFs",
+            "type": "shell",
+            "command": "bash scripts/generate-pdfs.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Resume (2-Page)",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html --output resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Resume (3-Page)",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.html --output resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Cover Letter",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input cover_letter/Cover_Letter_Vinod_Neelakantam.html --output cover_letter/Cover_Letter_Vinod_Neelakantam.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        }
+    ]
+}
