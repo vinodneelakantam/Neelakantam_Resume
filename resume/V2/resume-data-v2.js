@@ -38,7 +38,7 @@ window.resumeDataV2 = {
     languages: ["English", "German"],
     drivingLicense: "Class B",
     aboutMe: [
-        "Embedded Platform Integration Engineer with 12+ years in automotive software, delivering robust ECU and ADAS integration across device drivers, board bring-up, system validation, and platform release management.",
+        "Embedded Platform Integration Engineer with 14+ years in automotive software, delivering robust ECU and ADAS integration across device drivers, board bring-up, system validation, and platform release management.",
         "Designs and operates ASPICE-aligned CI/CD and release ecosystems that increase delivery reliability, reduce integration risk, and improve traceability for distributed engineering teams.",
         "Combines deep embedded build expertise (C/C++, Yocto, AOSP, Zephyr, Bricks-Evo) with practical DevOps execution to support multi-variant products at production scale.",
         "Focused for 7+ years on automotive cybersecurity integration, including TARA-based engineering, ISO/SAE 21434 work products, and secure OTA/SOTA delivery with signing and integrity controls.",
