@@ -31,11 +31,13 @@ window.resumeDataV2 = {
         "Standards & Methodologies: ASPICE SWE.5, ISO 26262, Agile, CI/CD/CT, TDD, SW/HW Debugging",
         "Automotive Tools: Development & Integration",
         "DevOps for Embedded: CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory, Grafana/ElasticSearch",
+        "Infrastructure as Code: Dockerfile/Compose, Pipeline-as-Code (Groovy/Jenkinsfile/Github-Actions), Kyverno-Policy management",
+        "DevSecOps: SAST/DAST, container & dependency scanning (Trivy/Snyk), secrets management, SBOM",
         "Build Systems: Yocto, Zephyr, AOSP, Custom (Bricks-Evo)",
-        "Cybersecurity: OTA",
+        "Cybersecurity: OTA, Partial-Update Strategy",
         "Interfaces: UART, I2C, SPI, CAN, Ethernet"
     ],
-    languages: ["English", "German"],
+    languages: ["English", "German- A1"],
     drivingLicense: "Class B",
     aboutMe: [
         "Embedded Platform Integration Engineer with 14+ years in automotive software, delivering robust ECU and ADAS integration across device drivers, board bring-up, system validation, and platform release management.",
@@ -47,15 +49,16 @@ window.resumeDataV2 = {
 
     coreCompetencies: [
         "Automotive Embedded Integration: ADAS and ECU platform integration, multi-variant delivery, build and dependency governance.",
-        "CI/CD and DevSecOps: Pipeline architecture, quality gates, artifact traceability, SBOM-aware release workflows.",
+        "CI/CD and DevSecOps: Pipeline architecture, quality gates, artifact traceability, container/dependency vulnerability scanning, secrets management, SBOM-aware release workflows.",
+        "Infrastructure as Code: Containerized build environments and versioned pipeline/config definitions (Dockerfile, Jenkinsfile, Kubernetes manifests) for reproducible, auditable infrastructure.",
         "Automotive Cybersecurity: TARA support, ISO/SAE 21434 alignment, CSMS (UNECE R155) and SUMS (UNECE R156) evidence readiness.",
         "Process and Compliance: ASPICE SWE.5-aligned integration practices, release documentation, and audit preparation."
     ],
     certifications: ["ISTQB Certified Tester - Foundation Level (CTFL)"],
     currentRoleFocus: [
-        "Embedded Platform Integration Engineer - Automotive Software Platforms",
-        "CI/CD and Release Integration for ADAS and Embedded ECU Programs",
-        "Automotive Cybersecurity Integration and Secure OTA/SOTA Delivery"
+        "Embedded Software Integration Engineer - Automotive/ADAS Platforms",
+        "Build & Release Engineer - CI/CD, Embedded-DevOps",
+        "Automotive Cybersecurity Engineer - Secure OTA/SOTA Delivery"
     ],
     workExperience: [
         {
@@ -64,15 +67,13 @@ window.resumeDataV2 = {
             period: "Sep 2021 - Present",
             details: [
                 "Implemented OTA-ready packaging workflows (PDX generation, signing, partial updates) in compliance with automotive cybersecurity requirements.",
-                "Developed tooling to analyze and optimize CI pipeline performance, reducing build time and improving reliability.",
+                "Developed Python-based tooling to automate build, integration, and release processes, and to analyze/optimize CI pipeline performance, improving efficiency, reliability, and traceability.",
                 "Owned release lifecycle management, including dependency alignment, milestone tracking, and delivery execution.",
                 "Set up and supported HIL/SIL environments and automated smoke testing for early validation during platform bring-up.",
-                "Provided L2/L3 support for CI/CD infrastructure and build systems, ensuring stability and developer productivity.",
+                "Provided L2/L3 support for CI/CD infrastructure and build systems, and supported build issue debugging and system integration across complex embedded environments.",
                 "Worked on automotive C/C++ build and integration workflows using Continental's Bricks-Evo custom build framework across ADAS platforms.",
-                "Developed Python-based engineering tools to automate build, integration, and release processes, improving efficiency and traceability.",
                 "Managed multi-variant software builds, handling dependencies, configuration, and cross-compilation for different ECU/product variants.",
-                "Integrated and maintained CI/CD pipelines (Jenkins, CloudBees, Docker, Kubernetes, Artifactory) aligned with custom build system workflows.",
-                "Supported build issue debugging and system integration in complex embedded environments.",
+                "Integrated and maintained CI/CD pipelines (Jenkins, CloudBees, Docker, Kubernetes, Artifactory), adopting Infrastructure as Code practices (Dockerfiles, Kubernetes manifests, Jenkins Pipeline-as-Code/Groovy) for version-controlled, reproducible, and auditable build and CI environments.",
                 "Contributed to platform-level activities involving AOSP, Yocto, and Zephyr environments, including build setup and integration support."
             ]
         },
@@ -82,7 +83,7 @@ window.resumeDataV2 = {
             period: "Sep 2019 - Sep 2021",
             details: [
                 "Coordinated software releases with cross-functional teams (PMs, architects, testers) to meet project and customer milestones.",
-                "Designed and maintained CI/CD pipelines using Jenkins, CMake, GitHub, and Artifactory to ensure stable and repeatable builds.",
+                "Designed and maintained CI/CD pipelines (Jenkins, CMake, GitHub, Artifactory), codifying pipeline configuration as version-controlled Groovy scripts (Pipeline-as-Code) for repeatable, auditable builds.",
                 "Defined and implemented ASPICE SWE.5 compliant integration processes, including build configuration, integration strategy, and release documentation.",
                 "Developed and automated smoke, regression, and data-flow test strategies to ensure software quality and early defect detection.",
                 "Set up and executed HIL/SIL validation environments during hardware bring-up and integration phases.",
@@ -110,8 +111,7 @@ window.resumeDataV2 = {
             company: "Synopsys Inc - Hyderabad",
             period: "Aug 2016 - Jul 2017",
             details: [
-                "Performed product verification for Synopsys ARC release candidates across embedded hardware, software, operating systems, multimedia applications, and FPGA boards.",
-                "Conducted interoperability testing to safeguard product dependencies, upholding the integrity of the company's product suite."
+                "Performed product verification and interoperability testing for Synopsys ARC release candidates across embedded hardware, software, operating systems, multimedia applications, and FPGA boards, safeguarding product suite integrity."
             ]
         },
         {
@@ -120,8 +120,7 @@ window.resumeDataV2 = {
             period: "Mar 2014 - Aug 2016",
             details: [
                 "Collaborated with industry leaders APTIV and Caterpillar at their development centers to drive innovation and enhance efficiency in automotive software integration.",
-                "Led the UDS fault management initiative for Hyundai Kia Motors' Short Range Side Radar (HKMC SRR3), ensuring optimal vehicle network performance.",
-                "Spearheaded the successful integration of UDS stack with Hyundai-Kia's Short-Range Radar."
+                "Led the UDS fault management initiative and spearheaded UDS stack integration for Hyundai-Kia Motors' Short Range Side Radar (HKMC SRR3), ensuring optimal vehicle network performance."
             ]
         },
         {
