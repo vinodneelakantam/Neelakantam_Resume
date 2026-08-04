@@ -3,7 +3,7 @@ window.resumeDataV2 = {
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",
     title: "Embedded Platform Integration Engineer",
-    address: "Von-Hünefeld Straße 14, Neu Ulm, 89231",
+    address: "Neu Ulm, 89231",
     contact: {
         phone: "+49 15124711204",
         email: "vinodneelakantam@gmail.com"
@@ -31,7 +31,7 @@ window.resumeDataV2 = {
         "Standards & Methodologies: ASPICE SWE.5, ISO 26262, Agile, CI/CD/CT, TDD, SW/HW Debugging",
         "Automotive Tools: Development & Integration",
         "DevOps for Embedded: CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory, Grafana/ElasticSearch",
-        "Infrastructure as Code: Dockerfile/Compose, Pipeline-as-Code (Groovy/Jenkinsfile/Github-Actions), Kyverno-Policy management",
+        "Infrastructure as Code: Docker, Pipeline-as-Code (Groovy/Jenkinsfile/Github-Actions), Kyverno-Policy management",
         "DevSecOps: SAST/DAST, container & dependency scanning (Trivy/Snyk), secrets management, SBOM",
         "Build Systems: Yocto, Zephyr, AOSP, Custom (Bricks-Evo)",
         "Cybersecurity: OTA, Partial-Update Strategy",
