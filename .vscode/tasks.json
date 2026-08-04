@@ -28,9 +28,9 @@
             "problemMatcher": []
         },
         {
-            "label": "Docker: Generate Resume (3-Page)",
+            "label": "Docker: Generate Resume (V2)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.html --output resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.pdf",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html --output resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.pdf",
             "dependsOn": ["Docker: Build PDF Tool Image"],
             "problemMatcher": []
         },

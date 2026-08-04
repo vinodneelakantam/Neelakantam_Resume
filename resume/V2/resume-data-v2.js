@@ -1,4 +1,4 @@
-window.resumeData3Page = {
+window.resumeDataV2 = {
     profileImage: "../../assets/photo.jpeg",
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",
@@ -27,14 +27,12 @@ window.resumeData3Page = {
         { degree: "Masters in Embedded Systems", location: "Hyderabad", year: "2013" }
     ],
     skills: [
-        "Build & Release Automation",
-        "Programming: C/C++, Python, Groovy, Shell",
-        "Standards: ASPICE SWE.5, ISO 26262, Agile",
-        "CI/CD/CT, TDD, SW/HW Debugging",
-        "Automotive Tools Development & Integration",
+        "Build & Release Automation: C/C++, Python, Groovy, Shell",
+        "Standards & Methodologies: ASPICE SWE.5, ISO 26262, Agile, CI/CD/CT, TDD, SW/HW Debugging",
+        "Automotive Tools: Development & Integration",
         "DevOps for Embedded: CMake, Jenkins (CloudBees), Docker/Kubernetes, Artifactory, Grafana/ElasticSearch",
         "Build Systems: Yocto, Zephyr, AOSP, Custom (Bricks-Evo)",
-        "Cybersecurity, OTA",
+        "Cybersecurity: OTA",
         "Interfaces: UART, I2C, SPI, CAN, Ethernet"
     ],
     languages: ["English", "German"],
@@ -62,7 +60,7 @@ window.resumeData3Page = {
     workExperience: [
         {
             title: "Embedded Platform Integration",
-            company: "AUMOVIO (Continental) — Ulm",
+            company: "AUMOVIO (Continental) - Ulm",
             period: "Sep 2021 - Present",
             details: [
                 "Implemented OTA-ready packaging workflows (PDX generation, signing, partial updates) in compliance with automotive cybersecurity requirements.",
@@ -80,10 +78,10 @@ window.resumeData3Page = {
         },
         {
             title: "Solution Integrator (ADAS, Surround View Systems)",
-            company: "AUMOVIO (Continental) — Ulm",
+            company: "AUMOVIO (Continental) - Ulm",
             period: "Sep 2019 - Sep 2021",
             details: [
-                "Coordinated software releases with cross-functional teams (PMs, architects, testers) ensuring alignment with project timelines and customer milestones.",
+                "Coordinated software releases with cross-functional teams (PMs, architects, testers) to meet project and customer milestones.",
                 "Designed and maintained CI/CD pipelines using Jenkins, CMake, GitHub, and Artifactory to ensure stable and repeatable builds.",
                 "Defined and implemented ASPICE SWE.5 compliant integration processes, including build configuration, integration strategy, and release documentation.",
                 "Developed and automated smoke, regression, and data-flow test strategies to ensure software quality and early defect detection.",
@@ -95,7 +93,7 @@ window.resumeData3Page = {
         },
         {
             title: "Software Integrator (ADAS, Camera Mirror Replacement)",
-            company: "SMR Automotive Global — Stuttgart",
+            company: "SMR Automotive Global - Stuttgart",
             period: "Jul 2017 - Aug 2019",
             details: [
                 "Designed and optimized Jenkins-based CI/CD pipelines, improving build reliability and delivery efficiency for camera mirror systems.",
@@ -109,16 +107,16 @@ window.resumeData3Page = {
         },
         {
             title: "Release Candidate Engineer (ARC Products)",
-            company: "Synopsys Inc — Hyderabad",
+            company: "Synopsys Inc - Hyderabad",
             period: "Aug 2016 - Jul 2017",
             details: [
-                "Performed thorough product verification for Synopsys ARC release candidates, encompassing embedded hardware, software, operating systems, multimedia applications, and FPGA development boards.",
+                "Performed product verification for Synopsys ARC release candidates across embedded hardware, software, operating systems, multimedia applications, and FPGA boards.",
                 "Conducted interoperability testing to safeguard product dependencies, upholding the integrity of the company's product suite."
             ]
         },
         {
             title: "Software Integrator (Radars)",
-            company: "Infosys — Bengaluru",
+            company: "Infosys - Bengaluru",
             period: "Mar 2014 - Aug 2016",
             details: [
                 "Collaborated with industry leaders APTIV and Caterpillar at their development centers to drive innovation and enhance efficiency in automotive software integration.",
@@ -128,13 +126,11 @@ window.resumeData3Page = {
         },
         {
             title: "Software Integrator (Engine Management Systems)",
-            company: "Robert Bosch Engineering — Coimbatore",
+            company: "Robert Bosch Engineering - Coimbatore",
             period: "Jun 2012 - Aug 2013",
             details: [
                 "Conducted thorough unit and integration testing, including Boundary Function Testing (BFT) and resource measurement, to ensure software integrity.",
-                "Analyzed post-integration real-time measurements to contribute to system optimization and performance improvements.",
-                "Automated Smoke Testing procedures on the ETAS LAB Car, significantly increasing validation efficiency.",
-                "Fulfilled the role of ASPICE Quality Coordinator, maintaining strict adherence to industry standards and best practices."
+                "Automated Smoke Testing procedures on the ETAS LAB Car, significantly increasing validation efficiency."
             ]
         }
     ]

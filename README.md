@@ -52,10 +52,10 @@ He has led platform integration and multi-variant release workflows for automoti
 |  |  |- CV_Neelakantam_Embedded_Build_Devops.html
 |  |  |- CV_Neelakantam_Embedded_Build_Devops.pdf
 |  |  `- resume-data.js
-|  `- 3-page/
-|     |- CV_Neelakantam_Embedded_Build_Devops_3Page.html
-|     |- CV_Neelakantam_Embedded_Build_Devops_3Page.pdf
-|     `- resume-data-3page.js
+|  `- V2/
+|     |- CV_Neelakantam_Embedded_Build_Devops_V2.html
+|     |- CV_Neelakantam_Embedded_Build_Devops_V2.pdf
+|     `- resume-data-v2.js
 |- scripts/
 |  `- generate-pdfs.sh
 |- html_to_pdf.py
@@ -70,13 +70,13 @@ He has led platform integration and multi-variant release workflows for automoti
 | Document | Format | Purpose |
 | --- | --- | --- |
 | Resume (2-page) | HTML and PDF | Compact, dense-layout professional profile and work experience |
-| Resume (3-page) | HTML and PDF | Expanded, more detailed work history and profile content, spanning 3 pages |
+| Resume (V2) | HTML and PDF | Alternate 2-page layout with expanded profile content (About Me, Core Competencies, Current Role Focus) and more detailed work history |
 | Cover Letter | HTML and PDF | Application-ready cover letter for embedded platform integration and release engineering roles |
 | Resume Data (2-page) | JavaScript | Structured content used by the 2-page resume HTML ([resume-data.js](resume/2-page/resume-data.js)) |
-| Resume Data (3-page) | JavaScript | Structured, more detailed content used by the 3-page resume HTML ([resume-data-3page.js](resume/3-page/resume-data-3page.js)) |
+| Resume Data (V2) | JavaScript | Structured, more detailed content used by the V2 resume HTML ([resume-data-v2.js](resume/V2/resume-data-v2.js)) |
 | Conversion Script | Python | Converts local HTML documents into recruiter-friendly PDF files |
 
-The two resume versions have independent data files, since the 3-page resume carries more detailed work history (e.g. separate AUMOVIO role entries, project/tooling specifics) than the condensed 2-page version. Update the matching data file for whichever version you're editing.
+The two resume versions have independent data files, since V2 carries more detailed work history (e.g. separate AUMOVIO role entries, project/tooling specifics) than the condensed 2-page version. Update the matching data file for whichever version you're editing.
 
 ## Generate PDFs
 
@@ -88,13 +88,13 @@ Generate the resume (2-page):
 python .\html_to_pdf.py --input .\resume\2-page\CV_Neelakantam_Embedded_Build_Devops.html --output .\resume\2-page\CV_Neelakantam_Embedded_Build_Devops.pdf
 ```
 
-Generate the resume (3-page):
+Generate the resume (V2):
 
 ```powershell
-python .\html_to_pdf.py --input .\resume\3-page\CV_Neelakantam_Embedded_Build_Devops_3Page.html --output .\resume\3-page\CV_Neelakantam_Embedded_Build_Devops_3Page.pdf
+python .\html_to_pdf.py --input .\resume\V2\CV_Neelakantam_Embedded_Build_Devops_V2.html --output .\resume\V2\CV_Neelakantam_Embedded_Build_Devops_V2.pdf
 ```
 
-Or use the VS Code **Run and Debug** panel with the "HTML to PDF (Resume 2-Page)" / "HTML to PDF (Resume 3-Page)" launch configurations ([.vscode/launch.json](.vscode/launch.json)).
+Or use the VS Code **Run and Debug** panel with the "HTML to PDF (Resume 2-Page)" / "HTML to PDF (Resume V2)" launch configurations ([.vscode/launch.json](.vscode/launch.json)).
 
 Generate the cover letter:
 
@@ -126,7 +126,7 @@ Or regenerate every PDF (both resumes and the cover letter) in one step with the
 ./scripts/generate-pdfs.sh
 ```
 
-These are also available as VS Code tasks (**Terminal > Run Task...**): "Docker: Build PDF Tool Image", "Docker: Generate All PDFs", "Docker: Generate Resume (2-Page)", "Docker: Generate Resume (3-Page)", and "Docker: Generate Cover Letter" ([.vscode/tasks.json](.vscode/tasks.json)).
+These are also available as VS Code tasks (**Terminal > Run Task...**): "Docker: Build PDF Tool Image", "Docker: Generate All PDFs", "Docker: Generate Resume (2-Page)", "Docker: Generate Resume (V2)", and "Docker: Generate Cover Letter" ([.vscode/tasks.json](.vscode/tasks.json)).
 
 ## Links
 

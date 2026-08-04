@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinod Kumar Neelakantam - Resume (3-Page)</title>
+    <title>Vinod Kumar Neelakantam - Resume (V2)</title>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -136,6 +136,13 @@
             min-width: 0;
             min-width: 340px;
             max-width: 700px;
+        }
+        .contact-icon {
+            width: 14px;
+            height: 14px;
+            vertical-align: -2px;
+            margin-right: 6px;
+            color: #3498db;
         }
         .contact-top {
             text-align: left;
@@ -277,7 +284,7 @@
 
         @page {
             size: A4;
-            margin: 12mm;
+            margin: 10mm;
         }
 
         @media print {
@@ -303,6 +310,7 @@
             .print-page-one {
                 display: table;
                 width: 100%;
+                min-height: 277mm;
                 break-after: auto;
                 page-break-after: auto;
             }
@@ -391,23 +399,29 @@
                 margin-top: 8px;
                 padding: 4px 8px;
             }
-            .print-main h2 {
+            .print-main h2,
+            .print-rest h2 {
                 font-size: 17px;
                 margin-bottom: 8px;
                 padding-bottom: 4px;
                 break-after: avoid-page;
                 page-break-after: avoid;
             }
-            .print-main .about-section {
+            .print-main .about-section,
+            .print-rest .about-section {
                 margin-bottom: 12px;
             }
             .print-main .about-section ul,
-            .print-main .job-details {
+            .print-main .job-details,
+            .print-rest .about-section ul,
+            .print-rest .job-details {
                 font-size: 11.5px;
                 line-height: 1.3;
             }
             .print-main .about-section li,
-            .print-main .job-details li {
+            .print-main .job-details li,
+            .print-rest .about-section li,
+            .print-rest .job-details li {
                 margin-bottom: 3px;
             }
 
@@ -416,39 +430,29 @@
                 break-before: page;
                 page-break-before: always;
             }
-            .print-rest h2 {
-                font-size: 21px;
-                margin-bottom: 16px;
-                padding-bottom: 8px;
-                break-after: avoid-page;
-                page-break-after: avoid;
-            }
-            .print-rest .about-section {
-                margin-bottom: 12px;
-            }
             .print-rest .job {
-                margin-bottom: 26px;
+                margin-bottom: 12px;
                 break-inside: auto;
                 page-break-inside: auto;
             }
             .print-rest .job-title {
-                font-size: 17px;
-                margin-bottom: 4px;
+                font-size: 14.2px;
+                margin-bottom: 2px;
             }
             .print-rest .job-company {
-                font-size: 15px;
-                margin-bottom: 4px;
+                font-size: 12.6px;
+                margin-bottom: 2px;
             }
             .print-rest .job-meta {
-                font-size: 13.5px;
-                margin-bottom: 12px;
+                font-size: 11.2px;
+                margin-bottom: 6px;
             }
             .print-rest .job-details {
-                font-size: 14.5px;
-                line-height: 1.5;
+                font-size: 11.6px;
+                line-height: 1.3;
             }
             .print-rest .job-details li {
-                margin-bottom: 7px;
+                margin-bottom: 3px;
             }
 
             .print-main h2 + .about-section,
@@ -490,7 +494,7 @@
 
     <div id="printDocument" class="print-document"></div>
 
-    <script src="resume-data-3page.js"></script>
+    <script src="resume-data-v2.js"></script>
     <script>
         (function () {
             function escapeHTML(text) {
@@ -508,6 +512,22 @@
 
             function githubIcon() {
                 return '<svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffffff" d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.15.68-3.82-1.52-3.82-1.52-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.16 1.74 1.16 1.01 1.74 2.66 1.24 3.3.95.1-.73.4-1.24.73-1.52-2.51-.29-5.15-1.25-5.15-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.46.11-3.05 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.65 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.59.23 2.76.11 3.05.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.26-5.16 5.55.41.35.77 1.03.77 2.08 0 1.5-.01 2.7-.01 3.07 0 .3.2.66.79.55 4.5-1.5 7.75-5.76 7.75-10.78C23.25 5.48 18.27.5 12 .5z"></path></svg>';
+            }
+
+            function pinIcon() {
+                return '<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path><circle cx="12" cy="9.5" r="2.4" fill="currentColor"></circle></svg>';
+            }
+
+            function phoneIcon() {
+                return '<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" fill="currentColor"></path></svg>';
+            }
+
+            function mailIcon() {
+                return '<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"></rect><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+            }
+
+            function globeIcon() {
+                return '<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>';
             }
 
             function renderListSection(title, items) {
@@ -540,10 +560,10 @@
                 }).join('');
 
                 var contactTop = [
-                    '<p>&#128205; ' + escapeHTML(data.address) + '</p>',
-                    '<p>&#128222; ' + escapeHTML(data.contact.phone) + '</p>',
-                    '<p>&#9993; <a href="mailto:' + escapeHTML(data.contact.email) + '">' + escapeHTML(data.contact.email) + '</a></p>',
-                    '<p>&#127760; ' + escapeHTML(data.nationality) + '</p>'
+                    '<p>' + pinIcon() + escapeHTML(data.address) + '</p>',
+                    '<p>' + phoneIcon() + escapeHTML(data.contact.phone) + '</p>',
+                    '<p>' + mailIcon() + '<a href="mailto:' + escapeHTML(data.contact.email) + '">' + escapeHTML(data.contact.email) + '</a></p>',
+                    '<p>' + globeIcon() + escapeHTML(data.nationality) + '</p>'
                 ].join('');
 
                 var educationValue = data.education.map(function (entry) {
@@ -643,7 +663,7 @@
             }
 
             function init() {
-                renderResume(window.resumeData3Page);
+                renderResume(window.resumeDataV2);
                 buildPrintLayout();
             }
 

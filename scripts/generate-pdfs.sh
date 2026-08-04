@@ -13,7 +13,7 @@ run() {
 }
 
 run resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf
-run resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.html resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.pdf
+run resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.pdf
 run cover_letter/Cover_Letter_Vinod_Neelakantam.html cover_letter/Cover_Letter_Vinod_Neelakantam.pdf
 
 echo "All PDFs generated via Docker."

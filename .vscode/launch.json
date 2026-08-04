@@ -26,16 +26,16 @@
             ]
         },
         {
-            "name": "HTML to PDF (Resume 3-Page)",
+            "name": "HTML to PDF (Resume V2)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
-                "${workspaceFolder}/resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.html",
+                "${workspaceFolder}/resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html",
                 "--output",
-                "${workspaceFolder}/resume/3-page/CV_Neelakantam_Embedded_Build_Devops_3Page.pdf"
+                "${workspaceFolder}/resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.pdf"
             ]
         },
         {
