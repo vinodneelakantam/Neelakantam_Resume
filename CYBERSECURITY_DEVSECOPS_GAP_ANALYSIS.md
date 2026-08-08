@@ -55,7 +55,19 @@ Current certs: `ISTQB CTFL` only (a testing cert, not security).
 | Nice-to-have | **GIAC GSEC / GCLD or Certified DevSecOps Professional (CDP, Practical DevSecOps)** | Signals broader DevSecOps title-matching for ATS |
 | Longer-term | **OSCP** or **eJPT** | Only if pivoting toward offensive security / pentesting-adjacent roles |
 
-### 2.4 GitHub / Portfolio Project Gaps
+### 2.4 Embedded/Hardware Security Gaps (Secure JTAG, Secure Storage, Secure Logging)
+
+These sit closer to your existing embedded/HW bring-up strength than the cloud-focused gaps above, but they differ in how much of a stretch each one is.
+
+| Topic | Fit to current profile | Reasoning |
+|---|---|---|
+| **Secure Storage** | Best fit | Direct extension of existing OTA/SOTA signing work (PDX generation, signing, integrity controls) — secure storage of signing keys/certs and secure flash partitions is the missing link in that story. |
+| **Secure Logging** | Strong fit, low effort | You already operate Grafana/ElasticSearch and own audit/evidence readiness (ASPICE SWE.5, R155 CSMS). Reframing this as tamper-evident/security event logging is mostly positioning, not new tooling. |
+| **Secure JTAG** | Weaker fit, biggest stretch | You have real HW debug experience (Lauterbach, CANoe, ODIS, UART/I2C/SPI/CAN bring-up) but debug-port lockdown/fusing is normally owned by silicon/HW security architects, not integration engineers — a genuine skill gap rather than a reframe. |
+
+**Bottom line:** Lead with **Secure Storage** and **Secure Logging** on the resume/interview story — both are direct, defensible extensions of the OTA-signing and audit-evidence work already documented under Current Strengths. Treat **Secure JTAG** as an interview-prep/learning topic only, not a resume claim, until there is hands-on proof (e.g. configuring debug-access lock bits on a real board).
+
+### 2.5 GitHub / Portfolio Project Gaps
 
 Your GitHub (`github.com/vinodneelakantam`) isn't referenced with any specific security-focused repo. DevSecOps hiring managers actively check GitHub. Suggested projects, ranked by relevance to your existing automotive/embedded strength:
 
@@ -81,7 +93,7 @@ Your GitHub (`github.com/vinodneelakantam`) isn't referenced with any specific s
 5. **Write-ups / blog posts (LinkedIn or a simple GitHub Pages site)**
    - Even 3–4 short posts like "Building a TARA-informed threat model for an OTA update system" turn your unique automotive-security experience into public, searchable proof of expertise.
 
-### 2.5 Resume/Positioning Gaps (quick wins, no new learning required)
+### 2.6 Resume/Positioning Gaps (quick wins, no new learning required)
 
 - Certifications list has only 1 entry and it's unrelated to security — this is the fastest visible gap to a recruiter.
 - No named tools for "SBOM" (add Syft/CycloneDX), "secrets management" (add Vault or cloud KMS if used), or "SAST/DAST" (name the actual tools used at Continental, if permitted to disclose).
