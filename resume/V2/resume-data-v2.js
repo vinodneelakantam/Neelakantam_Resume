@@ -130,7 +130,7 @@ window.resumeDataV2 = {
             company: "Robert Bosch Engineering - Coimbatore",
             period: "Jun 2012 - Aug 2013",
             details: [
-                "Conducted thorough unit and integration testing, including Boundary Function Testing (BFT) and resource measurement, to ensure software integrity.",
+                "Conducted thorough unit and integration testing, including Basic Functional Testing (BFT) and resource measurement, to ensure software integrity.",
                 "Automated Smoke Testing procedures on the ETAS LAB Car, significantly increasing validation efficiency."
             ]
         }
