@@ -2,7 +2,7 @@ window.resumeDataV2 = {
     profileImage: "../../assets/photo.jpeg",
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",
-    title: "Embedded Platform Integration Engineer",
+    title: "Embedded DevOps & Build Engineer | Software Integration",
     address: "Neu Ulm, 89231",
     contact: {
         phone: "+49 15124711204",
@@ -52,7 +52,7 @@ window.resumeDataV2 = {
         "Embedded Integration: ADAS, ECU platforms, multi-variant builds, dependency governance, cross-compilation.",
         "CI/CD & DevSecOps: Jenkins, CloudBees, Docker, Kubernetes, Artifactory, pipeline automation, SAST/SCA, SBOM, secrets management.",
         "Build Systems: CMake, Yocto, AOSP, Zephyr, Bricks-Evo, Infrastructure as Code, Dockerfiles, Kubernetes manifests, Pipeline-as-Code.",
-        "Testing & Validation: HIL/SIL environments, VectorCAST, PRQA, smoke/regression/timing tests, protocol validation (CAN, Ethernet, SPI, I2C, UART).",
+        "Testing & Validation: HIL/SIL environments, VectorCAST, PRQA, smoke/regression/timing tests, validation via (CAN, Ethernet, SPI, I2C, UART).",
         "Automotive Security: TARA, ISO/SAE 21434, CSMS/SUMS (UNECE R155/R156), OTA/SOTA, SecureAccess, SecureJTAG, binary signing, integrity controls.",
         "Standards & Process: ASPICE SWE.5, audit preparation, release documentation, compliance frameworks."
     ],

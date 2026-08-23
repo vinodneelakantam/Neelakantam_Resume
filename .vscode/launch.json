@@ -13,19 +13,6 @@
             ]
         },
         {
-            "name": "HTML to PDF (Resume 2-Page)",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/html_to_pdf.py",
-            "console": "integratedTerminal",
-            "args": [
-                "--input",
-                "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html",
-                "--output",
-                "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf"
-            ]
-        },
-        {
             "name": "HTML to PDF (Resume V2)",
             "type": "python",
             "request": "launch",
