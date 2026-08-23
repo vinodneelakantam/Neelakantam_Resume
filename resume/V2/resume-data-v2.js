@@ -35,24 +35,26 @@ window.resumeDataV2 = {
         "DevSecOps: SAST/DAST, container & dependency scanning (Trivy/Snyk), secrets management, SBOM",
         "Build Systems: Yocto, Zephyr, AOSP, Custom (Bricks-Evo)",
         "Cybersecurity: OTA, Partial-Update Strategy",
+        "Security Features: SecureAccess, SecureJTAG, Signing & Integrity of binaries",
         "Interfaces: UART, I2C, SPI, CAN, Ethernet"
     ],
     languages: ["English", "German- A1"],
     drivingLicense: "Class B",
     aboutMe: [
-        "Embedded Platform Integration Engineer with 14+ years in automotive software, delivering robust ECU and ADAS integration across device drivers, board bring-up, system validation, and platform release management.",
-        "Designs and operates ASPICE-aligned CI/CD and release ecosystems that increase delivery reliability, reduce integration risk, and improve traceability for distributed engineering teams.",
-        "Combines deep embedded build expertise (C/C++, Yocto, AOSP, Zephyr, Bricks-Evo) with practical DevOps execution to support multi-variant products at production scale.",
-        "Focused for 7+ years on automotive cybersecurity integration, including TARA-based engineering, ISO/SAE 21434 work products, and secure OTA/SOTA delivery with signing and integrity controls.",
-        "Brings end-to-end PDLC ownership, strong stakeholder alignment, and hands-on problem solving across development, integration, validation, release, and audit readiness."
+        "14+ years in automotive embedded software: ECU and ADAS integration, device drivers, board bring-up, system validation, platform release management.",
+        "ASPICE SWE.5-aligned CI/CD architect: pipeline design, release ecosystems, quality gates, and traceability for distributed teams.",
+        "Embedded build expertise: C/C++, CMake, Yocto, AOSP, Zephyr, Bricks-Evo; DevOps execution for multi-variant production platforms.",
+        "System-level validation expert: HIL/SIL testing, smoke/regression/timing strategies, root cause analysis using Lauterbach, CANoe, ODIS.",
+        "7+ years automotive cybersecurity: TARA, ISO/SAE 21434, OTA/SOTA delivery, SecureAccess/SecureJTAG, binary signing and integrity controls."
     ],
 
     coreCompetencies: [
-        "Automotive Embedded Integration: ADAS and ECU platform integration, multi-variant delivery, build and dependency governance.",
-        "CI/CD and DevSecOps: Pipeline architecture, quality gates, artifact traceability, container/dependency vulnerability scanning, secrets management, SBOM-aware release workflows.",
-        "Infrastructure as Code: Containerized build environments and versioned pipeline/config definitions (Dockerfile, Jenkinsfile, Kubernetes manifests) for reproducible, auditable infrastructure.",
-        "Automotive Cybersecurity: TARA support, ISO/SAE 21434 alignment, CSMS (UNECE R155) and SUMS (UNECE R156) evidence readiness.",
-        "Process and Compliance: ASPICE SWE.5-aligned integration practices, release documentation, and audit preparation."
+        "Embedded Integration: ADAS, ECU platforms, multi-variant builds, dependency governance, cross-compilation.",
+        "CI/CD & DevSecOps: Jenkins, CloudBees, Docker, Kubernetes, Artifactory, pipeline automation, SAST/SCA, SBOM, secrets management.",
+        "Build Systems: CMake, Yocto, AOSP, Zephyr, Bricks-Evo, Infrastructure as Code, Dockerfiles, Kubernetes manifests, Pipeline-as-Code.",
+        "Testing & Validation: HIL/SIL environments, VectorCAST, PRQA, smoke/regression/timing tests, protocol validation (CAN, Ethernet, SPI, I2C, UART).",
+        "Automotive Security: TARA, ISO/SAE 21434, CSMS/SUMS (UNECE R155/R156), OTA/SOTA, SecureAccess, SecureJTAG, binary signing, integrity controls.",
+        "Standards & Process: ASPICE SWE.5, audit preparation, release documentation, compliance frameworks."
     ],
     certifications: ["ISTQB Certified Tester - Foundation Level (CTFL)"],
     currentRoleFocus: [
@@ -67,6 +69,7 @@ window.resumeDataV2 = {
             period: "Sep 2021 - Present",
             details: [
                 "Implemented OTA-ready packaging workflows (PDX generation, signing, partial updates) in compliance with automotive cybersecurity requirements.",
+                "Integrated and implemented security features (SecureAccess, SecureJTAG) with signing and integrity controls for binary artifacts across the platform.",
                 "Developed Python-based tooling to automate build, integration, and release processes, and to analyze/optimize CI pipeline performance, improving efficiency, reliability, and traceability.",
                 "Owned release lifecycle management, including dependency alignment, milestone tracking, and delivery execution.",
                 "Set up and supported HIL/SIL environments and automated smoke testing for early validation during platform bring-up.",
@@ -102,8 +105,7 @@ window.resumeDataV2 = {
                 "Integrated testing and quality tools (VectorCAST, PRQA) into CI pipelines for automated validation and static analysis.",
                 "Developed detailed integration and testing documentation including procedures, workflows, and technical concepts.",
                 "Designed and executed comprehensive testing strategies (smoke, regression, timing, data flow) aligned with quality standards.",
-                "Led ASPICE audit preparation and served as integration manager, achieving GREEN rating for customer deliveries.",
-                "Conducted GAP analysis and implemented process improvements to enhance development maturity and compliance."
+                "Led ASPICE audit preparation and served as integration manager, achieving GREEN rating for customer deliveries; conducted GAP analysis and implemented process improvements to enhance development maturity and compliance."
             ]
         },
         {

@@ -562,8 +562,7 @@
                 var contactTop = [
                     '<p>' + pinIcon() + escapeHTML(data.address) + '</p>',
                     '<p>' + phoneIcon() + escapeHTML(data.contact.phone) + '</p>',
-                    '<p>' + mailIcon() + '<a href="mailto:' + escapeHTML(data.contact.email) + '">' + escapeHTML(data.contact.email) + '</a></p>',
-                    '<p>' + globeIcon() + escapeHTML(data.nationality) + '</p>'
+                    '<p>' + mailIcon() + '<a href="mailto:' + escapeHTML(data.contact.email) + '">' + escapeHTML(data.contact.email) + '</a></p>'
                 ].join('');
 
                 var educationValue = data.education.map(function (entry) {
@@ -571,6 +570,7 @@
                 }).join('; ');
 
                 var personalInfo = [
+                    '<li><strong>Nationality:</strong> ' + escapeHTML(data.nationality) + '</li>',
                     '<li><strong>Education:</strong> ' + educationValue + '</li>',
                     '<li><strong>Languages:</strong> ' + escapeHTML(data.languages.join(', ')) + '</li>',
                     '<li><strong>Driving License:</strong> ' + escapeHTML(data.drivingLicense) + '</li>'
