@@ -39,6 +39,32 @@
             ]
         },
         {
+            "name": "HTML to PDF (Resume Mani)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/resume/Mani/CV_Mani_Automotive_Cybersecurity.html",
+                "--output",
+                "${workspaceFolder}/resume/Mani/CV_Mani_Automotive_Cybersecurity.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Cover Letter Mani)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/cover_letter/Cover_Letter_Rajarajeswari_Mani.html",
+                "--output",
+                "${workspaceFolder}/cover_letter/Cover_Letter_Rajarajeswari_Mani.pdf"
+            ]
+        },
+        {
             "name": "HTML to PDF (Prompt Paths)",
             "type": "python",
             "request": "launch",
