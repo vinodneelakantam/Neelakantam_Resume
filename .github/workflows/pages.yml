@@ -1,0 +1,35 @@
+name: Deploy resume to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Prepare static site
+        run: |
+          mkdir -p _site/assets
+          cp resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html _site/index.html
+          cp resume/V2/resume-data-v2.js _site/
+          cp assets/photo.jpeg _site/assets/
+          sed -i 's#../../assets/photo.jpeg#assets/photo.jpeg#' _site/resume-data-v2.js
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
