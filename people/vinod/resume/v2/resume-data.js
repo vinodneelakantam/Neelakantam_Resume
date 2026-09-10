@@ -1,4 +1,4 @@
-window.resumeDataV2 = {
+window.resumeData = {
     profileImage: "../../assets/photo.jpeg",
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",

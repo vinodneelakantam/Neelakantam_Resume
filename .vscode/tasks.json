@@ -4,7 +4,7 @@
         {
             "label": "Docker: Build PDF Tool Image",
             "type": "shell",
-            "command": "docker build -t resume-pdf-tool:latest .",
+            "command": "docker build -t resume-pdf-tool:latest -f infra/Dockerfile infra",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -13,7 +13,7 @@
         {
             "label": "Docker: Generate All PDFs",
             "type": "shell",
-            "command": "bash scripts/generate-pdfs.sh",
+            "command": "bash infra/scripts/generate-pdfs.sh",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -21,23 +21,30 @@
             "problemMatcher": []
         },
         {
-            "label": "Docker: Generate Resume (2-Page)",
+            "label": "Docker: Generate Resume (Vinod v2)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html --output resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vinod/resume/v2/resume.html --output people/vinod/resume/v2/resume.pdf",
             "dependsOn": ["Docker: Build PDF Tool Image"],
             "problemMatcher": []
         },
         {
-            "label": "Docker: Generate Resume (V2)",
+            "label": "Docker: Generate Cover Letter (Vinod)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html --output resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.pdf",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vinod/cover-letter/cover-letter.html --output people/vinod/cover-letter/cover-letter.pdf",
             "dependsOn": ["Docker: Build PDF Tool Image"],
             "problemMatcher": []
         },
         {
-            "label": "Docker: Generate Cover Letter",
+            "label": "Docker: Generate Resume (Vamsi hil-test-engineer)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input cover_letter/Cover_Letter_Vinod_Neelakantam.html --output cover_letter/Cover_Letter_Vinod_Neelakantam.pdf",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/resume/hil-test-engineer/resume.html --output people/vamsi/resume/hil-test-engineer/resume.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Cover Letter (Vamsi)",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/cover-letter/cover-letter.html --output people/vamsi/cover-letter/cover-letter.pdf",
             "dependsOn": ["Docker: Build PDF Tool Image"],
             "problemMatcher": []
         }

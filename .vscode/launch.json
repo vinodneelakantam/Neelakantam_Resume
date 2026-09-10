@@ -5,7 +5,7 @@
             "name": "HTML to PDF (Current File)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/html_to_pdf.py",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
@@ -13,36 +13,62 @@
             ]
         },
         {
-            "name": "HTML to PDF (Resume V2)",
+            "name": "HTML to PDF (Resume - Vinod v2)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/html_to_pdf.py",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
-                "${workspaceFolder}/resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.html",
+                "${workspaceFolder}/people/vinod/resume/v2/resume.html",
                 "--output",
-                "${workspaceFolder}/resume/V2/CV_Neelakantam_Embedded_Build_Devops_V2.pdf"
+                "${workspaceFolder}/people/vinod/resume/v2/resume.pdf"
             ]
         },
         {
-            "name": "HTML to PDF (Cover Letter)",
+            "name": "HTML to PDF (Cover Letter - Vinod)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/html_to_pdf.py",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
-                "${workspaceFolder}/cover_letter/Cover_Letter_Vinod_Neelakantam.html",
+                "${workspaceFolder}/people/vinod/cover-letter/cover-letter.html",
                 "--output",
-                "${workspaceFolder}/cover_letter/Cover_Letter_Vinod_Neelakantam.pdf"
+                "${workspaceFolder}/people/vinod/cover-letter/cover-letter.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Resume - Vamsi hil-test-engineer)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/people/vamsi/resume/hil-test-engineer/resume.html",
+                "--output",
+                "${workspaceFolder}/people/vamsi/resume/hil-test-engineer/resume.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Cover Letter - Vamsi)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/people/vamsi/cover-letter/cover-letter.html",
+                "--output",
+                "${workspaceFolder}/people/vamsi/cover-letter/cover-letter.pdf"
             ]
         },
         {
             "name": "HTML to PDF (Prompt Paths)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/html_to_pdf.py",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
@@ -57,13 +83,13 @@
             "id": "htmlInputPath",
             "type": "promptString",
             "description": "HTML input file path",
-            "default": "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.html"
+            "default": "${workspaceFolder}/people/vinod/resume/v2/resume.html"
         },
         {
             "id": "pdfOutputPath",
             "type": "promptString",
             "description": "PDF output file path",
-            "default": "${workspaceFolder}/resume/2-page/CV_Neelakantam_Embedded_Build_Devops.pdf"
+            "default": "${workspaceFolder}/people/vinod/resume/v2/resume.pdf"
         }
     ]
 }

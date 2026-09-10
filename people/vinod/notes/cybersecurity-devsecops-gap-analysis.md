@@ -1,6 +1,6 @@
 # Cybersecurity & DevSecOps Gap Analysis
 
-Based on: `resume/V2/resume-data-v2.js` (Embedded Platform Integration Engineer profile)
+Based on: `resume/v2/resume-data.js` (Embedded Platform Integration Engineer profile, relative to `people/vinod/`)
 Target direction: **Automotive Cybersecurity Engineer** / **DevSecOps Engineer** roles
 
 ---
@@ -123,4 +123,4 @@ Your GitHub (`github.com/vinodneelakantam`) isn't referenced with any specific s
 
 ---
 
-*This file is a personal planning document generated from the resume content in `resume/V2/resume-data-v2.js`. Update it as certifications are earned and repos are published.*
+*This file is a personal planning document generated from the resume content in `resume/v2/resume-data.js` (relative to `people/vinod/`). Update it as certifications are earned and repos are published.*
