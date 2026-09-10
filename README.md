@@ -62,7 +62,7 @@ All build/conversion tooling (Dockerfile, `.dockerignore`, the `html_to_pdf.py` 
 |     `- notes/
 |        |- interview-qna/
 |        |  `- 01..07-*.md
-|        `- test-automation-devops-gap-analysis.md
+|        `- test-automation-gap-analysis.md
 |- infra/
 |  |- scripts/
 |  |  `- generate-pdfs.sh
@@ -100,7 +100,7 @@ HIL/SIL Test Engineer and automotive software integrator based in Regensburg, Ge
 - Resume: [people/vamsi/resume/hil-test-engineer](people/vamsi/resume/hil-test-engineer) (HTML + PDF + [resume-data.js](people/vamsi/resume/hil-test-engineer/resume-data.js))
 - Cover letter: [people/vamsi/cover-letter](people/vamsi/cover-letter)
 - Interview prep: [people/vamsi/notes/interview-qna](people/vamsi/notes/interview-qna)
-- Gap analysis: [people/vamsi/notes/test-automation-devops-gap-analysis.md](people/vamsi/notes/test-automation-devops-gap-analysis.md)
+- Gap analysis: [people/vamsi/notes/test-automation-gap-analysis.md](people/vamsi/notes/test-automation-gap-analysis.md)
 - Source CVs used as input: [people/vamsi/inputs](people/vamsi/inputs)
 
 Target roles: HIL/SIL Test Engineer, Software Integration Engineer (AUTOSAR/Gateway/Telematics), DevOps-Aligned Test Automation Engineer.
