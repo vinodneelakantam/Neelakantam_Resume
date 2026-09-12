@@ -52,16 +52,42 @@
             ]
         },
         {
-            "name": "HTML to PDF (Cover Letter - Vamsi)",
+            "name": "HTML to PDF (Cover Letter - Vamsi hil-test-engineer)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/infra/html_to_pdf.py",
             "console": "integratedTerminal",
             "args": [
                 "--input",
-                "${workspaceFolder}/people/vamsi/cover-letter/cover-letter.html",
+                "${workspaceFolder}/people/vamsi/cover-letter/hil-test-engineer/cover-letter.html",
                 "--output",
-                "${workspaceFolder}/people/vamsi/cover-letter/cover-letter.pdf"
+                "${workspaceFolder}/people/vamsi/cover-letter/hil-test-engineer/cover-letter.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Cover Letter - Vamsi fund-manager)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/people/vamsi/cover-letter/fund-manager/cover-letter.html",
+                "--output",
+                "${workspaceFolder}/people/vamsi/cover-letter/fund-manager/cover-letter.pdf"
+            ]
+        },
+        {
+            "name": "HTML to PDF (Resume - Vamsi fund-manager)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/infra/html_to_pdf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input",
+                "${workspaceFolder}/people/vamsi/resume/fund-manager/resume.html",
+                "--output",
+                "${workspaceFolder}/people/vamsi/resume/fund-manager/resume.pdf"
             ]
         },
         {

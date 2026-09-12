@@ -42,9 +42,23 @@
             "problemMatcher": []
         },
         {
-            "label": "Docker: Generate Cover Letter (Vamsi)",
+            "label": "Docker: Generate Cover Letter (Vamsi hil-test-engineer)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/cover-letter/cover-letter.html --output people/vamsi/cover-letter/cover-letter.pdf",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/cover-letter/hil-test-engineer/cover-letter.html --output people/vamsi/cover-letter/hil-test-engineer/cover-letter.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Resume (Vamsi fund-manager)",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/resume/fund-manager/resume.html --output people/vamsi/resume/fund-manager/resume.pdf",
+            "dependsOn": ["Docker: Build PDF Tool Image"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker: Generate Cover Letter (Vamsi fund-manager)",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace resume-pdf-tool:latest --input people/vamsi/cover-letter/fund-manager/cover-letter.html --output people/vamsi/cover-letter/fund-manager/cover-letter.pdf",
             "dependsOn": ["Docker: Build PDF Tool Image"],
             "problemMatcher": []
         }

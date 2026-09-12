@@ -1,5 +1,5 @@
 window.resumeData = {
-    profileImage: "",
+    profileImage: "../../assets/photo.jpg",
     nameFirst: "Vamsi Krishna Sai",
     nameLast: "Kavety",
     title: "HIL/SIL Test Engineer | Embedded Software Integration",
