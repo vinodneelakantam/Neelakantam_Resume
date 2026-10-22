@@ -1,5 +1,5 @@
 window.resumeDataV2 = {
-    profileImage: "../../assets/photo.jpeg",
+    profileImage: "../../assets/photo.png",
     nameFirst: "Vinod Kumar",
     nameLast: "Neelakantam",
     title: "Embedded DevOps & Build Engineer | Software Integration",
@@ -66,7 +66,7 @@ window.resumeDataV2 = {
         {
             title: "Embedded Platform Integration",
             company: "AUMOVIO (Continental) - Ulm",
-            period: "Sep 2021 - Present",
+            period: "Sep 2021 - June 2026",
             details: [
                 "Implemented OTA-ready packaging workflows (PDX generation, signing, partial updates) in compliance with automotive cybersecurity requirements.",
                 "Integrated and implemented security features (SecureAccess, SecureJTAG) with signing and integrity controls for binary artifacts across the platform.",
